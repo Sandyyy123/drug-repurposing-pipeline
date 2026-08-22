@@ -1,0 +1,27 @@
+# Demo decoys - simple small molecules / fragments, presumed non-binders.
+# Format: <SMILES> <name>
+# NOTE ON RIGOR: these bundled decoys are deliberately simple for a runnable demo.
+# A real validation uses PROPERTY-MATCHED decoys (e.g. DUD-E / DEKOIS) so that
+# enrichment reflects binding, not a trivial molecular-weight or logP artifact.
+# The validation harness (src/validate.py) is decoy-agnostic; swap this file for a
+# property-matched decoy set for a defensible benchmark.
+c1ccccc1 benzene
+Oc1ccccc1 phenol
+Cc1ccccc1 toluene
+Nc1ccccc1 aniline
+Clc1ccccc1 chlorobenzene
+c1ccncc1 pyridine
+c1ccc2ccccc2c1 naphthalene
+CCO ethanol
+CO methanol
+CCCO propanol
+CCCCCC hexane
+C1CCCCC1 cyclohexane
+CC(=O)C acetone
+CC(=O)O acetic_acid
+CCCC(=O)O butanoic_acid
+OCC(O)CO glycerol
+NC(=O)N urea
+CCN ethylamine
+COC dimethyl_ether
+CCCCCCCCCCCC dodecane

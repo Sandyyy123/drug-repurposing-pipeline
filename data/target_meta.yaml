@@ -1,0 +1,31 @@
+# Target metadata for the demo run.
+#
+# In a real project this describes the disease-associated protein and the exact
+# mutant structure the screen is run against. The 3D structure plugs in here:
+# an AlphaFold3-predicted model of the mutant, or an experimental PDB entry.
+
+target:
+  id: "DEMO_TARGET_1"
+  name: "Placeholder disease-associated protein (mutant)"
+  mutation: "p.X000Y (placeholder - set to the real disease mutation)"
+  uniprot: "P00000 (placeholder)"
+
+structure:
+  # Real-mode: point this at an AlphaFold3 model (CIF) or an experimental PDB/CIF.
+  # A prepared receptor (PDBQT for Vina, protein file for DiffDock) is generated
+  # from it in the preparation step.
+  source: "alphafold3 | pdb"
+  path: "structures/target_mutant.cif   # placeholder path"
+  prepared_receptor: "structures/target_mutant_prepared.pdbqt   # placeholder path"
+
+binding_site:
+  # Search-box centre and size for docking (Angstrom). Placeholder values; set
+  # from the known pocket / co-crystallised ligand for a real run.
+  center: [0.0, 0.0, 0.0]
+  size: [22.0, 22.0, 22.0]
+
+notes: >
+  The demo does not require a real structure: docking is run in demo mode with
+  synthetic, deterministic scores so the funnel is runnable anywhere. Provide a
+  real AlphaFold3/PDB structure and prepared receptor above, then run with the
+  engine adapters enabled (demo=False) for a real screen.

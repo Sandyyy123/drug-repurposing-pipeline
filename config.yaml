@@ -1,0 +1,42 @@
+# Pipeline configuration.
+# Every stage reads its parameters from here so a run is fully reproducible from
+# (this file + the input data + the seed).
+
+run:
+  seed: 42            # global random seed; also settable with --seed
+  demo: true          # demo mode uses synthetic deterministic engine scores
+  top_n_md: 5         # how many top consensus poses get MD / MM-PBSA re-scoring
+
+target:
+  meta: "data/target_meta.yaml"
+  # Human-readable receptor key mixed into the demo score hash. In real mode this
+  # is the prepared receptor file path.
+  receptor_id: "DEMO_TARGET_1"
+
+data:
+  actives: "data/demo_actives.smi"
+  decoys: "data/demo_decoys.smi"
+
+# Consensus rank-aggregation weights (per docking engine). Normalised internally.
+consensus:
+  weights:
+    diffdock: 1.0     # ML pose predictor
+    vina: 1.0         # physics scorer
+
+# Medicinal-chemistry / ADMET filters. Toggle each rule on/off.
+admet:
+  lipinski: true
+  lipinski_max_violations: 1   # classic Ro5 allows at most one violation
+  veber: true
+  pains: true
+
+# Retrospective validation harness.
+validation:
+  ef_fractions: [0.01, 0.05]   # report EF@1% and EF@5%
+  n_permutations: 1000         # label-shuffle null control iterations
+
+output:
+  results_dir: "results"
+  shortlist_csv: "results/shortlist.csv"
+  validation_json: "results/validation_report.json"
+  shortlist_size: 15           # how many top candidates to keep in the shortlist

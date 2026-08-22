@@ -1,0 +1,11 @@
+# Lightweight dependencies for DEMO mode. That is all you need to run
+# `python main.py --demo` and `pytest -q`.
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.1
+pyyaml>=6.0
+
+# Heavy scientific engines (RDKit, AutoDock Vina, DiffDock, GROMACS, an ADMET
+# predictor) are OPTIONAL and intentionally NOT listed here. They are wrapped
+# behind adapters in src/ and only needed for a real (non-demo) run. See the
+# "Real-run mode" section of README.md.

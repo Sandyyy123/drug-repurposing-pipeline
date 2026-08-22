@@ -1,0 +1,20 @@
+# Demo "actives" - well-known FDA-approved small-molecule drugs.
+# Format: <SMILES> <name>
+# These stand in for known binders of the target in the retrospective validation.
+# In a real run you supply your own confirmed actives for the specific target.
+CC(=O)Oc1ccccc1C(=O)O aspirin
+CC(C)Cc1ccc(cc1)C(C)C(=O)O ibuprofen
+COc1ccc2cc(C(C)C(=O)O)ccc2c1 naproxen
+OC(=O)Cc1ccccc1Nc1c(Cl)cccc1Cl diclofenac
+Cn1cnc2c1c(=O)n(C)c(=O)n2C caffeine
+CC(=O)CC(c1ccccc1)C1=C(O)c2ccccc2OC1=O warfarin
+O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O ciprofloxacin
+COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN1CCOCC1 gefitinib
+C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1 erlotinib
+CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1 sorafenib
+CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CC[C@@H](O)C[C@@H](O)CC(=O)O atorvastatin
+CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1 losartan
+CCCc1nn(C)c2c(=O)[nH]c(-c3cc(S(=O)(=O)N4CCN(C)CC4)ccc3OCC)nc12 sildenafil
+Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1 imatinib
+CCN(CC)CCNC(=O)c1ccc(N)cc1 procainamide
+CN1CCC[C@H]1c1cccnc1 nicotine
